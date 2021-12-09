@@ -1,7 +1,8 @@
 import urllib.request, time, datetime,random
 from socket import timeout
 def relay(number, state):
-    ip = "192.168.69.58"
+    # Your IP here.
+    ip = "x.x.x.x"
     try:
         if state == 1:
             print(f"Relay is active.\n")
@@ -18,6 +19,7 @@ while True:
     try:
         now = datetime.datetime.now()
         check = now.strftime("%H:%M:%S").split(":")
+        # Check if time is between 4:00PM and 10:30PM
         if (int(check[0]) > 16) and (int(check[0]) <= 21 or ((int(check[0]) == 22 and int(check[1]) < 30))):
                 if firstrun == True:
                     waittime = random.randrange(0,600)
