@@ -11,9 +11,6 @@ def relay(number, state):
         urllib.request.urlopen(url=f'http://{ip}/state.xml?relay{number}State={state}&noReply=1', timeout=.1)
     except timeout:
         pass
-def reset():
-    for x in range(1,5):
-        relay(x,0)
 firstrun = True
 while True:  
     try:
